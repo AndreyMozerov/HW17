@@ -8,9 +8,9 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.19.0",
-    assertJVersion = "3.23.1",
-    slf4jVersion = "1.7.32"
+def allureVersion = "2.24.0",
+    assertJVersion = "3.24.2",
+    slf4jVersion = "2.0.9"
 
 allure {
     report {
@@ -28,11 +28,11 @@ allure {
 
 dependencies {
     testImplementation(
-            "io.rest-assured:rest-assured:5.3.0",
+            "io.rest-assured:rest-assured:5.3.2",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.assertj:assertj-core:$assertJVersion",
-            "com.fasterxml.jackson.core:jackson-databind:2.14.1",
-            "org.junit.jupiter:junit-jupiter:5.9.0",
+            "com.fasterxml.jackson.core:jackson-databind:2.15.2",
+            "org.junit.jupiter:junit-jupiter:5.10.0",
             "org.slf4j:slf4j-simple:$slf4jVersion"
     )
 }

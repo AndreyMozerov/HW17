@@ -16,7 +16,7 @@ public class Spec {
 
 
      public static RequestSpecification request = with()
-             .baseUri("http://10.0.1.64:8100")
+             .baseUri("http://Server_ip")
              .basePath("/api")
              .contentType(JSON)
              .log().all();

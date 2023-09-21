@@ -18,7 +18,7 @@ public class RestApiBramLogin {
     void successfulLoginUserTest() {
 
         RestAssured.registerParser("text/plain", Parser.JSON);
-        String data = "{ \"login\": \"admin\", \"pass\": \"autoplay\" }";
+        String data = "{ \"login\": \"*******\", \"pass\": \"******\" }";
        Spec.request
 
                 .body(data)

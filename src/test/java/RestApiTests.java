@@ -1,6 +1,7 @@
 
 import org.junit.jupiter.api.Test;
 
+
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
@@ -10,15 +11,15 @@ public class RestApiTests {
 
     @Test
    void successfulLoginUserTest() {
-        String data = "{ \"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\" }";
+      //  String data = "{ \"login\": \"admin\", \"pass\": \"autoplay\" }";
         given()
                 .contentType(JSON)
-                .body(data)
+                .body("{ \"login\": \"admin\", \"pass\": \"autoplay\" }")
                 .when()
-                .post("https://reqres.in/api/login")
+                .post("http://10.0.1.64:8100/api/core/login")
                 .then()
                 .statusCode(200)
-                .body("token", notNullValue());
+                .body("accessToken", notNullValue());
     }
 
     @Test
